@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:background="#000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="8dp"
+            android:src="@drawable/no_profile"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/user_image"
+            android:layout_centerInParent="true"
+            android:padding="6dp"
+            android:singleLine="true"
+            android:id="@+id/username"
+            android:text="eze larry ifeanyi ppppppppppppppppppppppp"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@id/user_image"
+            android:background="#AEAEAE" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

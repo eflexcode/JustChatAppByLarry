@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/login_menu"
+        android:title="login"
+        android:iconTint="#fff"
+
+        android:icon="@drawable/ic_login"/>
+    <item android:id="@+id/signup_menu"
+        android:title="sign up"
+        android:icon="@drawable/ic_signup"/>
+</menu>

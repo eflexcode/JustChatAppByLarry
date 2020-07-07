@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".EditProfileActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#000"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/update_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="13dp"
+                android:hint="username"
+                android:text=""
+                android:textColorHint="#fff"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="username"
+                app:met_floatingLabelTextColor="@color/colorAccent"
+                app:met_floatingLabelTextSize="15sp"
+                app:met_textColor="#fff"
+                app:met_textColorHint="#fff" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/update_about_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="13dp"
+                android:hint="Bio"
+                android:maxLines="20"
+                android:textColorHint="#fff"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="Bio"
+                app:met_floatingLabelTextColor="@color/colorAccent"
+                app:met_floatingLabelTextSize="15sp"
+                app:met_textColor="#fff"
+                app:met_textColorHint="#fff" />
+
+            <Button
+                android:id="@+id/pick_date_bnt"
+                android:layout_width="250dp"
+                android:onClick="showDate"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:background="@color/colorAccent"
+                android:text="click to pick date of birth"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/showDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center_horizontal"
+                android:hint="date will be shown here"
+                android:text=""
+                android:textColor="#fff"
+                android:textColorHint="#504E4E"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bnt"
+                android:onClick="update"
+                android:text="update profile"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="21dp" />
+
+            <FrameLayout
+                android:id="@+id/fragment_main3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.justchat">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ImageFullSizeActivity"
+            android:theme="@style/SplashTheme"/>
+        <activity
+            android:name=".ForgetPasswordActivity"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".MessageActivityChat"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".MessageActivity"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".AboutUserActivity"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".PlashActivity"
+            android:theme="@style/SplashTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
+
+        <service
+            android:name=".cloudmessaging.FirebaseMessagingServiceClass"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

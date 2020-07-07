@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".fragments.UsersFragment">
+
+
+   <EditText
+       android:id="@+id/search"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textColorHint="#AEAAAA"
+       android:padding="12dp"
+       android:shadowColor="@color/colorAccent"
+       android:textColor="#fff"
+       android:hint="Search by name (search is case sensitive)"/>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@id/search"
+       android:id="@+id/recycle_view"
+       android:scrollbars="vertical"
+       tools:listitem="@layout/users_card"/>
+
+</RelativeLayout>

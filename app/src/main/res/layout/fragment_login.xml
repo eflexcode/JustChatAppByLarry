@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".fragments.LoginFragment">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/bolder"
+                android:orientation="vertical">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/email_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="19dp"
+                    android:hint="email"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#fff"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelText="email"
+                    app:met_floatingLabelTextColor="@color/colorAccent"
+                    app:met_floatingLabelTextSize="15sp"
+                    app:met_iconLeft="@drawable/ic_email_black_24dp"
+                    app:met_iconPadding="4dp"
+                    app:met_textColor="#fff"
+                    app:met_textColorHint="#fff" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/password_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="19dp"
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    android:textColorHint="#fff"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelText="password"
+                    app:met_floatingLabelTextColor="@color/colorAccent"
+                    app:met_floatingLabelTextSize="15sp"
+                    app:met_iconLeft="@drawable/ic_email_black_24dp"
+                    app:met_iconPadding="4dp"
+                    app:met_textColor="#fff"
+                    app:met_textColorHint="#fff" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/l"
+                android:layout_alignParentEnd="true"
+                android:paddingEnd="30dp"
+                android:text="forget password"
+                android:textColor="@color/colorWith"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/forget"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/bnt"
+                android:text="login"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="30sp" />
+
+</RelativeLayout>
